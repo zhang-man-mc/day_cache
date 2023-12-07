@@ -38,8 +38,10 @@
     }
   },
   "lint-staged": {
-    "*": [
-      "npm run prettier"
+    "*.{js,vue}": [
+      "npm run prettier",
+      "npm run lint:fix",
+      "git add"
     ]
   }
 }
