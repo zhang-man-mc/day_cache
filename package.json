@@ -31,7 +31,7 @@
     "vite": "^4.4.11"
   },
   "pre-commit": [
-    "prettier --write '**/*.{js,jsx,json,css,scss,md}'",
+    "prettier --write '**/*.{js,jsx,json,css,scss,md,vue}'",
     "git add"
   ]
 }
