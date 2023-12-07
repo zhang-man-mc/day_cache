@@ -7,13 +7,15 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "prettier": "prettier --write src/",
+
   },
   "dependencies": {
     "@pureadmin/utils": "^1.9.17",
     "axios": "^1.6.2",
     "echarts": "^5.4.3",
     "element-plus": "^2.4.3",
+    "husky": "^8.0.3",
     "pinia": "^2.1.7",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
@@ -30,9 +32,9 @@
     "unplugin-vue-components": "^0.25.2",
     "vite": "^4.4.11"
   },
-  "pre-commit": [
-    "prettier --write '**/*.{js,jsx,json,css,scss,md}'",
-    "git commit"
-  ]
-
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
