@@ -12,7 +12,7 @@ const router = createRouter({
       path: '/responsive',
       name: 'responsive',
       component: () => import('../views/res/ResponsiveDesign.vue')
-    },
+    }
   ]
 })
 

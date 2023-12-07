@@ -1,7 +1,7 @@
 <script setup>
-import {  useECharts } from "@pureadmin/utils";
-import {ref} from 'vue';
-const option  = {
+import { useECharts } from '@pureadmin/utils'
+import { ref } from 'vue'
+const option = {
   xAxis: {
     type: 'category',
     data: ['A', 'B', 'C']
@@ -15,20 +15,16 @@ const option  = {
       type: 'line'
     }
   ]
-};
+}
 // 折线图引用
 const chartRef = ref(null)
 
-const { setOptions } = useECharts(chartRef , { theme:'light' });
+const { setOptions } = useECharts(chartRef, { theme: 'light' })
 
-setOptions(
-    option
-)
+setOptions(option)
 </script>
 
 <template>
-<div id="main" ref="chartRef" style="width:100%; height: 40vh;"></div> 
+  <div id="main" ref="chartRef" style="width: 100%; height: 40vh"></div>
 </template>
-<style scoped>
-
-</style>
+<style scoped></style>
